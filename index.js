@@ -8,18 +8,17 @@ var app = express();
 app.set('view engine', 'ejs');
 app.set('views', './views');
 app.use(express.static('public'));
-app.listen(3000);
 
+app.listen(8080);
+//app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.get('/', function(req, res){
     res.render('index');
     console.log("Running!");
    
  });
 
- app.get('/cer', function(req, res){
-  const file = "J.jpg";
-  res.download(file); 
-});
+
+
 
 // for parsing application/json
 
